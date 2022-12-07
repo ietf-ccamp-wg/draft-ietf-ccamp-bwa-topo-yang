@@ -1,6 +1,6 @@
 ---
-title: "A YANG Data Model for Bandwidth Availability"
-abbrev: "Bandwidth Availability YANG Model"
+title: "A YANG Data Model for Bandwidth Availability Topology"
+abbrev: "Bandwidth Availability Topology YANG Model"
 docname: draft-ietf-ccamp-bwa-topo-yang-latest
 category: std
 ipr: trust200902
@@ -48,13 +48,18 @@ normative:
 informative:
 
 --- abstract
-This document defines the YANG data model for bandwidth availability for a link.
+This document defines a YANG data model to describe bandwidth availability for a link in a network topology.
 
 --- middle
 
 # Introduction
 
-This document defines a YANG data model for bandwidth bandwidth availability for a link.  It is an important characteristic of a microwave radio link, but it could also be applicable for other types of links. The model augments "YANG Data Model for Traffic Engineering (TE) Topologies" defined in {{!RFC8795}}, which is based on "A YANG Data Model for Network Topologies" defined in {{!RFC8345}}.
+This document defines a YANG data model to describe bandwidth availability for a link.  It is an important characteristic of links with variable bandwidth, where each level of bandwidth can be associated with a certain level of availability.  An example of such a link is microwave radio link, where the bandwidth can be dynamically adapted to changing signal conditions, impacted by interference & fading, in order to guarantee the required quality of the link at every single moment.  {{?RFC8330}} defines a mechanism to report bandwidth-availability information through OSPF-TE, but it could also be useful for a controller to access such bandwidth-availability information as part of the topology model when performing a path/route computation.  The model augments "YANG Data Model for Traffic Engineering (TE) Topologies" defined in {{!RFC8795}}, which is based on "A YANG Data Model for Network Topologies" defined in {{!RFC8345}}.
+
+The bandwidth availability model is expected to be used between a Provisioning Network Controller (PNC) and a Multi Domain Service Coordinator(MDSC) {{?RFC8453}}.  Examples of use cases that can be supported are:
+
+1. Propagation of relevant characteristics of a link, including bandwidth availability, to higher topology layers, where it e.g. could be used as a criterion when configuring and optimizing a path for a connection/service through the network end to end.
+2. A link could dynamically adjust its bandwidth according to changes in the signal conditions. {{?RFC8330}} defines a mechanism to report bandwidth-availability information through OSPF-TE, but it could also be useful for a controller to access such bandwidth-availability information as part of the topology model when performing a path/route computation.
 
 ## Terminology and Definitions
 The following acronyms are used in this document:
@@ -64,15 +69,12 @@ PNC Provisioning Network Controller
 MDSC Multi Domain Service Coordinator
 
 ## Tree Structure
-A simplified graphical representation of the data models is used in chapters 3.1, 4.1, and 5.1 of this document.  The meaning of the symbols in these diagrams is defined in {{?RFC8340}}.
+A simplified graphical representation of the data model is used in chapter 3.1 of this document.  The meaning of the symbols in these diagrams is defined in {{?RFC8340}}.
 
 # Requirements Language
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and "OPTIONAL" in this document are to be interpreted as described in BCP 14 {{!RFC2119}} {{!RFC8174}} when, and only when, they appear in all capitals, as shown here.
 
-## Model applicability to other technology
-TBD
-
-#Bandwidth Availability Topology YANG Data Model
+# Bandwidth Availability Topology YANG Data Model
 
 ## YANG Tree
 ~~~~ yangtree
@@ -86,14 +88,9 @@ TBD
 ~~~~
 {: sourcecode-markers="true" sourcecode-name="ietf-bandwidth-availability-topology.yang"}
 
-## Applicability of the Data Model for Traffic Engineering (TE) Topologies
-Since microwave is a point-to-point radio technology providing connectivity on L0/L1 over a radio link between two termination points and cannot be used to perform cross-connection or switching of the traffic to create network connectivity across multiple microwave radio links, a majority of the leafs in the Data Model for Traffic Engineering (TE) Topologies augmented by the microwave topology model are not applicable.
-
-More specifically, admin-status and oper-status are recommended to be reported for links only.  Status for termination points can be used when links are inter-domain and when the status of only one side of link is known, but since microwave is a point-to-point technology where both ends normally belong to the same domain it is not expected to be applicable in normal cases.  Furthermore, admin-status is not applicable for microwave radio links.  Enable and disable of a radio link is instead done in the constituent carriers.
-
 # Security Considerations
 
-   The YANG modules specified in this document define schemas for data
+   The YANG module specified in this document defines schemas for data
    that is designed to be accessed via network management protocols such
    as NETCONF {{!RFC6241}} or RESTCONF {{!RFC8040}}.  The lowest NETCONF layer
    is the secure transport layer, and the mandatory-to-implement secure
@@ -106,12 +103,12 @@ More specifically, admin-status and oper-status are recommended to be reported f
    preconfigured subset of all available NETCONF or RESTCONF protocol
    operations and content.
 
-   The YANG modules specified in this document import and augment the
+   The YANG module specified in this document imports and augments the
    ietf-network and ietf-network-topology models defined in {{!RFC8345}}.
    The security considerations from {{!RFC8345}} are applicable to the
-   modules in this document.
+   module in this document.
 
-   There are a several data nodes defined in these YANG modules that are
+   There are a several data nodes defined in this YANG module that are
    writable/creatable/deletable (i.e., config true, which is the
    default).  These data nodes may be considered sensitive or vulnerable
    in some network environments.  Write operations (e.g., edit-config)
@@ -121,17 +118,18 @@ More specifically, admin-status and oper-status are recommended to be reported f
 
    In the "ietf-bandwidth-availability-topology" module:
 
-   -  availability: A malicious client could attempt to modify the
+   - availability: A malicious client could attempt to modify the
       availability level which could modify the intended behavior.
 
-   -  link-bandwidth: A malicious client could attempt to modify the
+   - link-bandwidth: A malicious client could attempt to modify the
       link bandwidth which could either provide more or less link
       bandwidth at the indicated availability level, changing the
       resource allocation in unintended ways.
 
 # IANA Considerations
 
-   IANA is asked to assign a new URI from the "IETF XML Registry" {{!RFC3688}} as follows:
+   IANA is asked to assign a new URI from the "IETF XML Registry"
+   {{!RFC3688}} as follows:
 
 ~~~~
 URI: urn:ietf:params:xml:ns:yang:ietf-bandwidth-availability-topology
@@ -153,3 +151,25 @@ XML: N/A; the requested URI is an XML namespace.
 
 --- back
 
+# Examples of the application of the Bandwidth Availability Topology Model {#examples}
+
+   This appendix provides some examples and illustrations of how the
+   Bandwidth Availability Topology Model can be used.  There is one
+   extended tree to illustrate the model and a JSON based instantiation
+   for a small network example.
+
+## A tree for a the Bandwidth Availability Topilogy Model
+
+   The tree below shows the leafs for the Bandwidth Availability Model
+   including the augmented Network Topology Model defined in
+   {{!RFC8345}} and Traffic Engineering (TE) Topologies model defined
+   in {{!RFC8795}}.
+
+~~~~ yangtree
+{::include ./full-bw.tree}
+~~~~
+{: artwork-name="full-bw.tree"}
+
+## A topology with a single link including bandwidth availability information
+
+   TBD
