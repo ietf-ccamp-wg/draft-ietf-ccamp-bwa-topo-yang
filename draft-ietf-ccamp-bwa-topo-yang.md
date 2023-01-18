@@ -113,8 +113,8 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
    default).  These data nodes may be considered sensitive or vulnerable
    in some network environments.  Write operations (e.g., edit-config)
    to these data nodes without proper protection can have a negative
-   effect on network operations.  These are the subtrees and data nodes
-   and their sensitivity/vulnerability:
+   effect on network operations.  These are the data nodes and their
+   sensitivity/vulnerability:
 
    In the "ietf-bandwidth-availability-topology" module:
 
