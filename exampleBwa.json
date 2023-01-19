@@ -1,0 +1,57 @@
+{
+  "ietf-network:networks": {
+    "network": [
+      {
+        "network-id": "Generic-network",
+        "network-types": {
+          "ietf-te-topology:te-topology": {
+            "ietf-eth-te-topology:eth-tran-topology": {
+            }
+          }
+        },
+        "node": [
+          {
+            "node-id": "Generic-N1",
+            "ietf-network-topology:termination-point": [
+              {
+                "tp-id": "Generic-N1-TP1"
+              }
+            ]
+          },
+          {
+            "node-id": "Generic-N2",
+            "ietf-network-topology:termination-point": [
+              {
+                "tp-id": "Generic-N2-TP2"
+              }
+            ]
+          }
+        ],
+        "ietf-network-topology:link": [
+          {
+            "link-id": "Generic-N1-N2",
+            "source": {
+              "source-node": "Generic-N1",
+              "source-tp": "Generic-N1-TP1"
+            },
+            "destination": {
+              "dest-node": "Generic-N2",
+              "dest-tp": "Generic-N2-TP2"
+            },
+			"ietf-te-topology:te": {
+              "te-link-attributes": {
+                "ietf-bandwidth-availability-topology:link-availability":
+				[
+                  {
+                    "availability": "0.999",
+                    "link-bandwidth": "20000000"
+                  }
+                ]
+               }
+            },
+          }
+        ]
+      },
+    ]
+  }
+}
