@@ -5,14 +5,14 @@
 ccamp                                                         J. Ahlberg
 Internet-Draft                                              S. Mansfield
 Intended status: Standards Track                                Ericsson
-Expires: 22 July 2023                                              M. Ye
+Expires: 23 July 2023                                              M. Ye
                                                                  I. Busi
                                                      Huawei Technologies
                                                                    X. Li
                                                  NEC Laboratories Europe
                                                             D. Spreafico
                                                               Nokia - IT
-                                                         18 January 2023
+                                                         19 January 2023
 
 
          A YANG Data Model for Bandwidth Availability Topology
@@ -45,7 +45,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 22 July 2023.
+   This Internet-Draft will expire on 23 July 2023.
 
 Copyright Notice
 
@@ -78,8 +78,7 @@ Table of Contents
    Appendix A.  Examples of the application of the Bandwidth
            Availability Topology Model
      A.1.  A tree for a the Bandwidth Availability Topilogy Model
-     A.2.  A topology with a single link including bandwidth
-           availability information
+     A.2.  A JSON example
    Authors' Addresses
 
 1.  Introduction
@@ -442,10 +441,63 @@ A.1.  A tree for a the Bandwidth Availability Topilogy Model
                     |  +--rw bwatopo:link-bandwidth?   uint64
                     +--ro bwatopo:actual-bandwidth?    yang:gauge64
 
-A.2.  A topology with a single link including bandwidth availability
-      information
+A.2.  A JSON example
 
-   TBD
+   {
+     "ietf-network:networks": {
+       "network": [
+         {
+           "network-id": "Generic-network",
+           "network-types": {
+             "ietf-te-topology:te-topology": {
+               "ietf-eth-te-topology:eth-tran-topology": {}
+             }
+           },
+           "node": [
+             {
+               "node-id": "Generic-N1",
+               "ietf-network-topology:termination-point": [
+                 {
+                   "tp-id": "Generic-N1-TP1"
+                 }
+               ]
+             },
+             {
+               "node-id": "Generic-N2",
+               "ietf-network-topology:termination-point": [
+                 {
+                   "tp-id": "Generic-N2-TP2"
+                 }
+               ]
+             }
+           ],
+           "ietf-network-topology:link": [
+             {
+               "link-id": "Generic-N1-N2",
+               "source": {
+                 "source-node": "Generic-N1",
+                 "source-tp": "Generic-N1-TP1"
+               },
+               "destination": {
+                 "dest-node": "Generic-N2",
+                 "dest-tp": "Generic-N2-TP2"
+               },
+               "ietf-te-topology:te": {
+                 "te-link-attributes": {
+         "ietf-bandwidth-availability-topology:link-availability": [
+                     {
+                       "availability": "0.999",
+                       "link-bandwidth": "20000000"
+                     }
+                   ]
+                 }
+               }
+             }
+           ]
+         }
+       ]
+     }
+   }
 
 Authors' Addresses
 

@@ -170,6 +170,9 @@ XML: N/A; the requested URI is an XML namespace.
 ~~~~
 {: artwork-name="full-bw.tree"}
 
-## A topology with a single link including bandwidth availability information
-
-   TBD
+## A JSON example
+~~~~ json
+{::include ./exampleBwa.json}
+~~~~
+{: artwork-name="exampleBwa.json"}
+{: sourcecode-markers="false" sourcecode-name="exampleBwa.json"}
