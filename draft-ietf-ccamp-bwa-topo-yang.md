@@ -1,6 +1,6 @@
 ---
-title: "A YANG Data Model for Bandwidth Availability Topology"
-abbrev: "Bandwidth Availability Topology YANG Model"
+title: "A YANG Data Model for Bandwidth Availability Topo"
+abbrev: "BWA Topo YANG Model"
 docname: draft-ietf-ccamp-bwa-topo-yang-latest
 category: std
 ipr: trust200902
@@ -78,7 +78,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 
 ## YANG Tree
 ~~~~ yangtree
-{::include ./bw.tree}
+{::include ./trees/bw.tree}
 ~~~~
 {: artwork-name="bw.tree"}
 
@@ -166,13 +166,13 @@ XML: N/A; the requested URI is an XML namespace.
    in {{!RFC8795}}.
 
 ~~~~ yangtree
-{::include ./full-bw.tree}
+{::include ./trees/full-bw.tree}
 ~~~~
 {: artwork-name="full-bw.tree"}
 
 ## A JSON example
 ~~~~ json
-{::include ./exampleBwa.json}
+{::include ./json/exampleBwa.json}
 ~~~~
 {: artwork-name="exampleBwa.json"}
 {: sourcecode-markers="false" sourcecode-name="exampleBwa.json"}
