@@ -1,5 +1,5 @@
 ---
-title: "A YANG Data Model for Bandwidth Availability Topo"
+title: "A YANG Data Model for Bandwidth Availability Topology"
 abbrev: "BWA Topo YANG Model"
 docname: draft-ietf-ccamp-bwa-topo-yang-latest
 category: std
@@ -158,7 +158,7 @@ XML: N/A; the requested URI is an XML namespace.
    extended tree to illustrate the model and a JSON based instantiation
    for a small network example.
 
-## A tree for a the Bandwidth Availability Topilogy Model
+## A tree for a the Bandwidth Availability Topology Model
 
    The tree below shows the leafs for the Bandwidth Availability Model
    including the augmented Network Topology Model defined in
@@ -176,3 +176,9 @@ XML: N/A; the requested URI is an XML namespace.
 ~~~~
 {: artwork-name="exampleBwa.json"}
 {: sourcecode-markers="false" sourcecode-name="exampleBwa.json"}
+
+{: numbered="false"}
+# Acknowledgments
+   This document was prepared using kramdown
+
+   The authors would like to thank ...

@@ -5,17 +5,17 @@
 ccamp                                                         J. Ahlberg
 Internet-Draft                                              S. Mansfield
 Intended status: Standards Track                                Ericsson
-Expires: 19 August 2023                                            M. Ye
+Expires: 20 August 2023                                            M. Ye
                                                                  I. Busi
                                                      Huawei Technologies
                                                                    X. Li
                                                  NEC Laboratories Europe
                                                             D. Spreafico
                                                               Nokia - IT
-                                                        15 February 2023
+                                                        16 February 2023
 
 
-           A YANG Data Model for Bandwidth Availability Topo
+         A YANG Data Model for Bandwidth Availability Topology
                  draft-ietf-ccamp-bwa-topo-yang-latest
 
 Abstract
@@ -45,7 +45,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 19 August 2023.
+   This Internet-Draft will expire on 20 August 2023.
 
 Copyright Notice
 
@@ -77,8 +77,9 @@ Table of Contents
      6.2.  Informative References
    Appendix A.  Examples of the application of the Bandwidth
            Availability Topology Model
-     A.1.  A tree for a the Bandwidth Availability Topilogy Model
+     A.1.  A tree for a the Bandwidth Availability Topology Model
      A.2.  A JSON example
+   Acknowledgments
    Authors' Addresses
 
 1.  Introduction
@@ -421,7 +422,7 @@ Appendix A.  Examples of the application of the Bandwidth Availability
    extended tree to illustrate the model and a JSON based instantiation
    for a small network example.
 
-A.1.  A tree for a the Bandwidth Availability Topilogy Model
+A.1.  A tree for a the Bandwidth Availability Topology Model
 
    The tree below shows the leafs for the Bandwidth Availability Model
    including the augmented Network Topology Model defined in [RFC8345]
@@ -497,6 +498,12 @@ A.2.  A JSON example
        ]
      }
    }
+
+Acknowledgments
+
+   This document was prepared using kramdown
+
+   The authors would like to thank ...
 
 Authors' Addresses
 
