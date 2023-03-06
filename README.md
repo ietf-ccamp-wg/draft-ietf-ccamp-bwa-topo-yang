@@ -1,17 +1,17 @@
-# A YANG Data Model for Microwave Topology
+# A YANG Data Model for Bandwidth Availability Topology
 
-This is the working area for the IETF [CCAMP Working Group](https://datatracker.ietf.org/wg/ccamp/documents/) Internet-Draft, "A YANG Data Model for Microwave Topology".
+This is the working area for the IETF [CCAMP Working Group](https://datatracker.ietf.org/wg/ccamp/documents/) Internet-Draft, "A YANG Data Model for Bandwidth Availability Topology".
 
-* [Editor's Copy](https://ietf-ccamp-wg.github.io/draft-ietf-ccamp-mw-topo-yang/#go.draft-ietf-ccamp-mw-topo-yang.html)
-* [Datatracker Page](https://datatracker.ietf.org/doc/draft-ietf-ccamp-mw-topo-yang)
-* [Working Group Draft](https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-mw-topo-yang)
-* [Compare Editor's Copy to Working Group Draft](https://ietf-ccamp-wg.github.io/draft-ietf-ccamp-mw-topo-yang/#go.draft-ietf-ccamp-mw-topo-yang.diff)
+* [Editor's Copy](https://ietf-ccamp-wg.github.io/draft-ietf-ccamp-bwa-topo-yang/#go.draft-ietf-ccamp-bwa-topo-yang.html)
+* [Datatracker Page](https://datatracker.ietf.org/doc/draft-ietf-ccamp-bwa-topo-yang)
+* [Working Group Draft](https://datatracker.ietf.org/doc/html/draft-ietf-ccamp-bwa-topo-yang)
+* [Compare Editor's Copy to Working Group Draft](https://ietf-ccamp-wg.github.io/draft-ietf-ccamp-bwa-topo-yang/#go.draft-ietf-ccamp-bwa-topo-yang.diff)
 
 
 ## Contributing
 
 See the
-[guidelines for contributions](https://github.com/ietf-ccamp-wg/draft-ietf-ccamp-mw-topo-yang/blob/main/CONTRIBUTING.md).
+[guidelines for contributions](https://github.com/ietf-ccamp-wg/draft-ietf-ccamp-bwa-topo-yang/blob/main/CONTRIBUTING.md).
 
 Contributions can be made by creating pull requests.
 The GitHub interface supports creating pull requests using the Edit (✏) button.
