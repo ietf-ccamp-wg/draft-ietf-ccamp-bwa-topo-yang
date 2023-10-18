@@ -1,46 +1,66 @@
 ---
+coding: utf-8
+
 title: "A YANG Data Model for Bandwidth Availability Topology"
 abbrev: "BWA Topo YANG Model"
-docname: draft-ietf-ccamp-bwa-topo-yang-latest
 category: std
+docname: draft-ietf-ccamp-bwa-topo-yang-latest
 ipr: trust200902
+submissiontype: IETF
+v: 3
 area: Routing
-workgroup: ccamp
+workgroup: CCAMP Working Group
 keyword: Internet-Draft
-stand_alone: yes
+venue:
+   group: CCAMP
+   type: Working Group
+   mail: ccamp@ietf.org
+   arch: https://datatracker.ietf.org/wg/ccamp/about/
+   github: https://github.com/ietf-ccamp-wg/draft-ietf-ccamp-mw-topo-yang
+   latest: https://github.com/ietf-ccamp-wg/draft-ietf-ccamp-mw-topo-yang
 pi: [toc, sortrefs, symrefs]
-consensus: true
 
 author:
  -
-   ins: J. Ahlberg
-   name: Jonas Ahlberg
-   organization: Ericsson
+   email: jonas.ahlberg@ericsson.com
+   fullname: Jonas Ahlberg
+   organization: Ericsson AB
+   street: Lindholmspiren 11
+   city: Goteborg
+   code: 417 56
+   country: Sweden
    email: jonas.ahlberg@ericsson.com
  -
-   ins: S. Mansfield
-   name: Scott Mansfield
-   organization: Ericsson
+   fullname: Scott Mansfield
+   organization: Ericsson Inc
    email: scott.mansfield@ericsson.com
  -
-   ins: M. Ye
-   name: Min Ye
+   fullname: Min Ye
    organization: Huawei Technologies
+   street: No.1899, Xiyuan Avenue
+   city: Chengdu
+   code: 611731
+   country: China
    email: amy.yemin@huawei.com
  -
-   ins: I. Busi
-   name: Italo Busi
+   fullname: Italo Busi
    organization: Huawei Technologies
    email: italo.busi@huawei.com
  -
-   ins: X. Li
-   name: Xi Li
+   fullname: Xi Li
    organization: NEC Laboratories Europe
-   email: xi.li@neclab.eu
+   street: Kurfursten-Anlage 36
+   city: Heidelberg
+   code: 69115
+   country: Germany
+   email: Xi.Li@neclab.eu
  -
-   ins: D. Spreafico
-   name: Daniela Spreafico
+   fullname: Daniela Spreafico
    organization: Nokia - IT
+   street: Via Energy Park, 14
+   city: Vimercate (MI)
+   code: 20871
+   country: Italy
    email: daniela.spreafico@nokia.com
 
 normative:

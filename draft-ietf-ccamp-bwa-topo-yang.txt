@@ -2,17 +2,18 @@
 
 
 
-ccamp                                                         J. Ahlberg
-Internet-Draft                                              S. Mansfield
-Intended status: Standards Track                                Ericsson
-Expires: 7 September 2023                                          M. Ye
+CCAMP Working Group                                           J. Ahlberg
+Internet-Draft                                               Ericsson AB
+Intended status: Standards Track                            S. Mansfield
+Expires: 20 April 2024                                      Ericsson Inc
+                                                                   M. Ye
                                                                  I. Busi
                                                      Huawei Technologies
                                                                    X. Li
                                                  NEC Laboratories Europe
                                                             D. Spreafico
                                                               Nokia - IT
-                                                            6 March 2023
+                                                         18 October 2023
 
 
          A YANG Data Model for Bandwidth Availability Topology
@@ -23,12 +24,23 @@ Abstract
    This document defines a YANG data model to describe bandwidth
    availability for a link in a network topology.
 
-Discussion Venues
+About This Document
 
    This note is to be removed before publishing as an RFC.
 
+   The latest revision of this draft can be found at https://github.com/
+   ietf-ccamp-wg/draft-ietf-ccamp-mw-topo-yang.  Status information for
+   this document may be found at https://datatracker.ietf.org/doc/draft-
+   ietf-ccamp-bwa-topo-yang/.
+
+   Discussion of this document takes place on the CCAMP Working Group
+   mailing list (mailto:ccamp@ietf.org), which is archived at
+   https://datatracker.ietf.org/wg/ccamp/about/.  Subscribe at
+   https://www.ietf.org/mailman/listinfo/ccamp/.
+
    Source for this draft and an issue tracker can be found at
-   https://github.com/ietf-ccamp-wg/draft-ietf-ccamp-mw-topo-yang.
+   https://github.com/https://github.com/ietf-ccamp-wg/draft-ietf-ccamp-
+   mw-topo-yang.
 
 Status of This Memo
 
@@ -45,7 +57,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 7 September 2023.
+   This Internet-Draft will expire on 20 April 2024.
 
 Copyright Notice
 
@@ -508,17 +520,24 @@ Acknowledgments
 Authors' Addresses
 
    Jonas Ahlberg
-   Ericsson
+   Ericsson AB
+   Lindholmspiren 11
+   SE-417 56 Goteborg
+   Sweden
    Email: jonas.ahlberg@ericsson.com
 
 
    Scott Mansfield
-   Ericsson
+   Ericsson Inc
    Email: scott.mansfield@ericsson.com
 
 
    Min Ye
    Huawei Technologies
+   No.1899, Xiyuan Avenue
+   Chengdu
+   611731
+   China
    Email: amy.yemin@huawei.com
 
 
@@ -529,9 +548,15 @@ Authors' Addresses
 
    Xi Li
    NEC Laboratories Europe
-   Email: xi.li@neclab.eu
+   Kurfursten-Anlage 36
+   69115 Heidelberg
+   Germany
+   Email: Xi.Li@neclab.eu
 
 
    Daniela Spreafico
    Nokia - IT
+   Via Energy Park, 14
+   20871 Vimercate (MI)
+   Italy
    Email: daniela.spreafico@nokia.com
