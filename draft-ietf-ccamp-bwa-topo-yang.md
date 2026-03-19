@@ -68,6 +68,7 @@ normative:
 informative:
 
 --- abstract
+
 This document defines a YANG data model to describe bandwidth availability for a link in a network topology.
 
 --- middle
